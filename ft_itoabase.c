@@ -6,13 +6,13 @@
 /*   By: malasalm <malasalm@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 10:38:18 by malasalm          #+#    #+#             */
-/*   Updated: 2020/06/29 10:45:01 by malasalm         ###   ########.fr       */
+/*   Updated: 2020/06/29 10:58:01 by malasalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa_base(long value, int base)
+char	*ft_itoabase(long value, int base)
 {
 	char	*str;
 	int		i;
