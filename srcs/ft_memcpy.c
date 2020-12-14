@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** copies “n” bytes from memory area “src” to memory area “dst”.  If “dst” and
-** “src” overlap, behavior is undefined. Returns the original value of “dst”.
-*/
+
 
 #include "libft.h"
 

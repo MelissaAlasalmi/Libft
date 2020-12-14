@@ -10,15 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** appends a copy of the null-terminated string “s2”, but not more than “n”
-** characters from “s2”, to the end of the null-terminated string “s1”, then
-** adds a terminating `\0'.  The string “s1” must have sufficient space to
-** hold the result. The source and destination strings should not overlap, as
-** the behavior is undefined. Returns the pointer “s1”. Uses ft_strlen,
-** ft_strcpy, and ft_strncpy.
-*/
-
 #include "libft.h"
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)

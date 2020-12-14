@@ -10,11 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** copies the string “src” to “dst” including the terminating `\0' character.
-** Returns “dst”.
-*/
-
 char	*ft_strcpy(char *dst, const char *src)
 {
 	unsigned int i;

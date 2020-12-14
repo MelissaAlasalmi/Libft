@@ -10,10 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** outputs the character “c” to the standard output.
-*/
-
 #include "libft.h"
 
 void	ft_putchar(char c)

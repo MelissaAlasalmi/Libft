@@ -10,11 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** outputs the integer “n” to the standard output. Uses ft_putchar and ft_putnbr
-** (recursively).
-*/
-
 #include "libft.h"
 
 void	ft_putnbr(int x)

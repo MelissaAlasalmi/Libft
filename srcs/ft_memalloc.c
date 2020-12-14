@@ -10,12 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** allocates (with malloc(3)) and returns a “fresh” memory area. The memory
-** allocated is initialized to 0. Returns the allocated memory area. If the
-** allocation fails, the function returns NULL. Uses ft_bzero.
-*/
-
 #include "libft.h"
 
 void	*ft_memalloc(size_t size)

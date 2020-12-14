@@ -10,10 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** outputs the string “s” to the standard output. Uses ft_putchar.
-*/
-
 #include "libft.h"
 
 void	ft_putstr(char const *s)

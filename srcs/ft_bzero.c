@@ -10,11 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** writes “n” zeroed bytes to the string “s”.  If “n” is zero, bzero() does
-** nothing. Uses ft_memset.
-*/
-
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)

@@ -10,14 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** allocates (with malloc(3)) and returns an array of “fresh” strings (all
-** ending with ’\0’, including the array itself) obtained by splitting s using
-** the character c as a delimiter. If the allocation fails the function returns
-** NULL. Example: ft_strsplit("*hello*fellow***students*", ’*’) returns the
-** array ["hello", "fellow", "students"]. Uses ft_wordcount and ft_strsub.
-*/
-
 #include "libft.h"
 
 char	**ft_strsplit(char const *s, char c)

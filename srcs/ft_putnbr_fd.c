@@ -10,11 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** outputs the integer “n” to the file descriptor “fd”. Uses  ft_putchar_fd and
-** ft_putnbr_fd (recursively).
-*/
-
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)

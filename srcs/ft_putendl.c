@@ -10,11 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** outputs the string “s” to the standard output followed by a ’\n’. Uses
-** ft_putstr.
-*/
-
 #include "libft.h"
 
 void	ft_putendl(char const *s)

@@ -10,10 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** outputs the string “s” to the file descriptor “fd”. Uses ft_putchar_fd.
-*/
-
 #include "libft.h"
 
 void	ft_putstr_fd(char const *s, int fd)

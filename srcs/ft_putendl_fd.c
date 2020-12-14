@@ -10,11 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** outputs the string “s” to the file descriptor “fd” followed by a ’\n’. Uses
-** ft_putstr_fd.
-*/
-
 #include "libft.h"
 
 void	ft_putendl_fd(char const *s, int fd)

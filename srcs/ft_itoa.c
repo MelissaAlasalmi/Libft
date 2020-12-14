@@ -10,13 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** allocate (with malloc(3)) and returns a “fresh” string ending with ’\0’
-** representing the integer n given as argument. Negative numbers must be
-** supported. If the allocation fails, the function returns NULL. Uses
-** ft_strdup, ft_strjoin, and ft_itoa (recursively).
-*/
-
 #include "libft.h"
 
 char	*ft_itoa(long long n)

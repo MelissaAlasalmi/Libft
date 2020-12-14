@@ -10,12 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** returns the number of bytes in the string pointed to by “s”, excluding the
-** terminating null bye ('\0'), but at most “maxlen.” Returns either the same
-** result as strlen() or maxlen, whichever is smaller.
-*/
-
 #include "libft.h"
 
 size_t	ft_strnlen(const char *s, size_t maxlen)

@@ -10,10 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** counts and returns the number of words in a string.
-*/
-
 #include "libft.h"
 
 int		ft_wordcount(const char *s, char c)

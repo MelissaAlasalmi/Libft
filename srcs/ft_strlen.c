@@ -10,12 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** calculates the length of the string s, excluding the terminating null byte.
-** Returns the number of characters that precede the terminating NULL
-** character.
-*/
-
 #include "libft.h"
 
 size_t	ft_strlen(const char *s)
