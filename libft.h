@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malasalm <malasalm@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: Melissa <Melissa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 10:56:31 by malasalm          #+#    #+#             */
-/*   Updated: 2020/06/29 10:57:43 by malasalm         ###   ########.fr       */
+/*   Updated: 2020/10/19 08:48:12 by Melissa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define BUFF_SIZE 1
+# define MAX_FD 4864
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -31,7 +33,7 @@ int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
 int					ft_isprint(int c);
-char				*ft_itoa(int n);
+char				*ft_itoa(long long n);
 void				*ft_memalloc(size_t size);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
@@ -79,7 +81,7 @@ char				*ft_strtrim(char const *s);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 int					ft_wordcount(const char *s, char c);
-int					ft_intlen(long num);
+int					ft_intlen(long long num);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
@@ -87,6 +89,9 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-char				*ft_itoabase(long value, int base);
+char				*ft_itoabase(long long value, int base);
+char				*ft_uitoabase(unsigned long long value, int base);
+int					get_next_line(const int fd, char **line);
+int					ft_abs(int n);
 
 #endif

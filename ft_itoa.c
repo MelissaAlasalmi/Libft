@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malasalm <malasalm@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: Melissa <Melissa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 16:39:48 by malasalm          #+#    #+#             */
-/*   Updated: 2019/11/10 16:22:43 by malasalm         ###   ########.fr       */
+/*   Updated: 2020/08/16 12:15:33 by Melissa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+char	*ft_itoa(long long n)
 {
-	char	*str;
-	long	num;
-	int		i;
+	char		*str;
+	long long	num;
+	int			i;
 
 	num = n;
 	i = ft_intlen(num);
