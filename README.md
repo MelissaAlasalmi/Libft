@@ -160,7 +160,6 @@ int	ft_isalpha(int c);
 
 ### ft_isdigit
 Tests for a decimal digit character. Regardless of locale, this includes the following characters only: 0123456789. The isnumber() function behaves similarly to isdigit(), but may recognize additional characters, depending on the current locale setting. The value of the argument must be representable as an unsigned char or the value of EOF. Returns zero if the character tests false and return non-zero if the character tests true.
-*/
 ```c
 int	ft_isdigit(int c);
 ```
@@ -375,7 +374,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size);
 ```
 
 ### ft_lstdelone
-Takes as a parameter a link’s pointer address and frees the memory of the link’s content using the function del given as a parameter, then frees the link’s memory using free(3). The memory of next must not be freed under any circumstance. Finally, the pointer to the link that was just freed must be set to NULL.
+Takes as a parameter a link’s pointer address and frees the memory of the link’s content using the function "del" given as a parameter, then frees the link’s memory using free(3). The memory of next must not be freed under any circumstance. Finally, the pointer to the link that was just freed must be set to NULL.
 ```c
 void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 ```
@@ -387,70 +386,82 @@ void	ft_lstdel(t_list **alst, void (*del)(void*, size_t));
 ```
 
 ### ft_lstadd
-Adds the element new at the beginning of the list.
+Adds the element "new" at the beginning of the list.
 ```c
 void	ft_lstadd(t_list **alst, t_list *new);
 ```
 
 ### ft_lstiter
-Iterates the list lst and applies the function f to each link.
+Iterates the list "lst" and applies the function "f" to each link.
 ```c
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 ```
 
 ### ft_lstmap
-Iterates the list lst and applies the function f to each link.
+Iterates the list "lst" and applies the function "f" to each link.
 ```c
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 ```
 
 ## My custom functions:
 
-
 ### ft_abs
-
+Finds the absolute value of "n".
 ```c
-
+int		ft_abs(int n);
 ```
 
 ### ft_intlen
-
+Finds the length (in characters) of "num". Example, ft_intlen(100) will return 3, while ft_intlen(-2345) returns 4.
 ```c
-
+int	ft_intlen(long long num);
 ```
 
 ### ft_itoabase
-
+Works the same way as ft_itoa, but it also takes "base" as a paramater, allowing you to carry out the conversion for any base. Made custome for ft_printf.
+- Uses ft_strnew
+- Uses ft_strcpy
 ```c
-
-```
-
-### ft_lstaddend
-
-```c
-
-```
-
-### ft_strnlen
-
-```c
-
+char		*ft_itoabase(long long value, int base);
 ```
 
 ### ft_uitoabase
-
+Works the same way as ft_itoabase, but it returns its value as unsigned. Made custome for ft_printf.
+- Uses ft_strnew
 ```c
+char		*ft_uitoabase(unsigned long long value, int base);
+```
 
+### ft_lstaddend
+Adds the element "new" at the end of the list.
+```c
+void	ft_lstaddend(t_list **alst, t_list *new);
+```
+
+### ft_strnlen
+Returns the number of bytes in the string pointed to by “s”, excluding the terminating null bye ('\0'), but at most “maxlen.” Returns either the same result as strlen() or maxlen, whichever is smaller.
+```c
+size_t	ft_strnlen(const char *s, size_t maxlen);
 ```
 
 ### ft_wordcount
-
+Counts and returns the number of words in a string. Made custom for ft_strsplit.
 ```c
-
+int		ft_wordcount(const char *s, char c);
 ```
 
 ### get_next_line
-
+✅ Project score: 123/100 ✅ 
+Returns a line read from a file descriptor
 ```c
-
+int get_next_line(const int fd, char **line);
 ```
+
+## Coming soon:
+### ft_printf
+✅ Project score: 109/100 ✅ 
+A recoded version of libc’s printf function
+```c
+int		ft_printf(const char *format, ...);
+```
+
