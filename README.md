@@ -61,7 +61,7 @@ size_t	ft_strlen(const char *s);
 
 ### ft_strdup
 Allocates sufficient memory for a copy of the string “s1”, does the copy, and returns a pointer to it. The pointer may subsequently be used as an argument to the function free(3). If insufficient memory is available, NULL is returned and errno is set to ENOMEM. 
-- Uses ft_strcpy.
+- Uses ft_strcpy
 ```c
 char	*ft_strdup(const char *s1);
 ```
@@ -101,7 +101,6 @@ char	*ft_strncat(char *s1, const char *s2, size_t n);
 Copies and concatenates strings with the same input parameters and output result as snprintf(3). designed to be a safer, more consistent, and less error prone replacement for the easily misused functions strncpy(3) and strncat(3). strlcpy() and strlcat() take the full size of the destination buffer and guarantee NUL-termination if there is room.  Note that room for the NUL should be included in “dstsize”. strlcpy() copies up to “dstsize” - 1 characters from the string “src” to “dst”, NUL-terminating the result if dstsize is not 0. strlcat() appends string src to the end of dst. It will append at most “dstsize” - strlen(dst) - 1 characters. It will then NUL-terminate, unless “dstsize” is 0 or the original “dst” string was longer than “dstsize” (in practice this should not happen as it means that either “dstsize” is incorrect or that “dst” is not a proper string). If the “src” and “dst” strings overlap, the behavior is undefined. 
 - Uses ft_strlen 
 - Uses ft_memcpy
-*/
 ```c
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 ```
@@ -114,7 +113,7 @@ char	*ft_strchr(const char *s, int c);
 
 ### ft_strrchr
 Is identical to strchr, except it locates the last occurrence of “c”. Returns a pointer to the located character, or NULL if the character does not appear in the string. 
-- Uses ft_strlen.
+- Uses ft_strlen
 ```c
 char	*ft_strrchr(const char *s, int c);
 ```
