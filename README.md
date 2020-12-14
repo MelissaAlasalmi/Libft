@@ -1,4 +1,6 @@
 # libft
+
+✅ Project score: 122/100 ✅  
 C programming usually allows you to access highly useful standard functions - Hive, on the other hand, does not.  
 During this project, we took the time to re-write standard functions on our own and added them to our personal library. Throughout my studies at Hive, none of the projects I have completed would have been possible without this library! And over time, I have expanded this list of functions as I have added useful additions for more complex projects.  
 
