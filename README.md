@@ -451,7 +451,7 @@ int		ft_wordcount(const char *s, char c);
 ```
 
 ### get_next_line
-✅ Project score: 123/100 ✅ 
+✅ Project score: 123/100 ✅  
 Returns a line read from a file descriptor
 ```c
 int get_next_line(const int fd, char **line);
@@ -459,7 +459,7 @@ int get_next_line(const int fd, char **line);
 
 ## Coming soon:
 ### ft_printf
-✅ Project score: 109/100 ✅ 
+✅ Project score: 109/100 ✅  
 A recoded version of libc’s printf function
 ```c
 int		ft_printf(const char *format, ...);
