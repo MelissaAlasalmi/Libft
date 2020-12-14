@@ -1,4 +1,4 @@
-# libft
+# Libft
 
 ✅ Project score: 122/100 ✅  
 C programming usually allows you to access highly useful standard functions - Hive, on the other hand, does not.  
