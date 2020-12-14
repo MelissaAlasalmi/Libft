@@ -198,7 +198,7 @@ int	ft_tolower(int c);
 ## Additional functions:
 
 ### ft_memalloc
-Allocates (with malloc(3)) and returns a “fresh” memory area. The memory allocated is initialized to 0. Returns the allocated memory area. If the allocation fails, the function returns NULL. 
+Allocates and returns a “fresh” memory area. The memory allocated is initialized to 0. Returns the allocated memory area. If the allocation fails, the function returns NULL. 
 - Uses ft_bzero
 ```c
 void	*ft_memalloc(size_t size);
@@ -211,7 +211,7 @@ void	ft_memdel(void **ap);
 ```
 
 ### ft_strnew
-Allocates (with malloc(3)) and returns a “fresh” string ending with ’\0’. Each character of the string is initialized at ’\0’. If the allocation fails the function returns NULL. Returns the string allocated and initialized to 0. 
+Allocates and returns a “fresh” string ending with ’\0’. Each character of the string is initialized at ’\0’. If the allocation fails the function returns NULL. Returns the string allocated and initialized to 0. 
 - Uses ft_memalloc
 ```c
 char	*ft_strnew(size_t size);
@@ -243,13 +243,13 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 ```
 
 ### ft_strmap
-Applies the function “f” to each character of the string given as argument to create a “fresh” new string (with malloc(3)) resulting from the successive applications of “f”. Uses ft_strnew and ft_strlen. Returns the “fresh” string created from the successive applications of “f”.
+Applies the function “f” to each character of the string given as argument to create a “fresh” new string resulting from the successive applications of “f”. Uses ft_strnew and ft_strlen. Returns the “fresh” string created from the successive applications of “f”.
 ```c
 char	*ft_strmap(char const *s, char (*f)(char));
 ```
 
 ### ft_strmapi
-Applies the function “f” to each character of the string passed as argument by giving its index as first argument to create a “fresh” new string (with malloc(3)) resulting from the successive applications of “f”. Returns the “fresh” string created from the successive applications of “f”. 
+Applies the function “f” to each character of the string passed as argument by giving its index as first argument to create a “fresh” new string resulting from the successive applications of “f”. Returns the “fresh” string created from the successive applications of “f”. 
 - Uses ft_strnew
 - Uses ft_strlen
 - Uses ft_striteri
@@ -272,21 +272,21 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n);
 ```
 
 ### ft_strsub
-Allocates (with malloc(3)) and returns a “fresh” substring from the string given as argument. The substring begins at index “start” and is of size “len”. If “start” and “len” aren’t referring to a valid substring, the behavior is undefined. Returns the value of the substring. If the allocation fails, the function returns NULL.
+Allocates and returns a “fresh” substring from the string given as argument. The substring begins at index “start” and is of size “len”. If “start” and “len” aren’t referring to a valid substring, the behavior is undefined. Returns the value of the substring. If the allocation fails, the function returns NULL.
 - Uses ft_strlen
 ```c
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 ```
 
 ### ft_strjoin
-Allocates (with malloc(3)) and returns a “fresh” string ending with ’\0’, the result of the concatenation of s1 and s2. If the allocation fails the function returns NULL. 
+Allocates and returns a “fresh” string ending with ’\0’, the result of the concatenation of s1 and s2. If the allocation fails the function returns NULL. 
 - Uses ft_strlen
 ```c
 char		*ft_strjoin(char const *s1, char const *s2);
 ```
 
 ### ft_strtrim
-Allocates (with malloc(3)) and returns a copy of the string given as argument without whitespaces at the beginning or at the end of the string. Will be considered as whitespaces the following characters ’ ’, ’\n’ and ’\t’. If s has no whitespaces at the beginning or at the end, the function returns a copy of “s”. If the allocation fails the function returns NULL. 
+Allocates and returns a copy of the string given as argument without whitespaces at the beginning or at the end of the string. Will be considered as whitespaces the following characters ’ ’, ’\n’ and ’\t’. If s has no whitespaces at the beginning or at the end, the function returns a copy of “s”. If the allocation fails the function returns NULL. 
 - Uses ft_strlen
 - Uses ft_strnew
 - Uses ft_strsub
@@ -295,7 +295,7 @@ char	*ft_strtrim(char const *s);
 ```
 
 ### ft_strsplit
-Allocates (with malloc(3)) and returns an array of “fresh” strings (all ending with ’\0’, including the array itself) obtained by splitting s using the character c as a delimiter. If the allocation fails the function returns NULL. Example: ft_strsplit("*hello*fellow*students*", ’*’) returns the array ["hello", "fellow", "students"]. 
+Allocates and returns an array of “fresh” strings (all ending with ’\0’, including the array itself) obtained by splitting s using the character c as a delimiter. If the allocation fails the function returns NULL. Example: ft_strsplit("*hello*fellow*students*", ’*’) returns the array ["hello", "fellow", "students"]. 
 - Uses ft_wordcount
 - Uses ft_strsub
 ```c
@@ -303,7 +303,7 @@ char	**ft_strsplit(char const *s, char c);
 ```
 
 ### ft_itoa
-Allocates (with malloc(3)) and returns a “fresh” string ending with ’\0’ representing the integer "n" given as argument. Negative numbers must be supported. If the allocation fails, the function returns NULL. 
+Allocates and returns a “fresh” string ending with ’\0’ representing the integer "n" given as argument. Negative numbers must be supported. If the allocation fails, the function returns NULL. 
 - Uses ft_intlen
 ```c
 char	*ft_itoa(long long n);
@@ -368,7 +368,7 @@ void	ft_putnbr_fd(int n, int fd);
 ## Functions that manipulate lists:
 
 ### ft_lstnew
-Allocates (with malloc(3)) and returns a “fresh” link. The variables content and content_size of the new link are initialized by copy of the parameters of the function. If the parameter content is nul, the variable content is initialized to NULL and the variable content_size is initialized to 0 even if the parameter content_size isn’t. The variable next is initialized to  NULL. If the allocation fails, the function returns NULL. Return value is the new link.
+Allocates and returns a “fresh” link. The variables content and content_size of the new link are initialized by copy of the parameters of the function. If the parameter content is nul, the variable content is initialized to NULL and the variable content_size is initialized to 0 even if the parameter content_size isn’t. The variable next is initialized to  NULL. If the allocation fails, the function returns NULL. Return value is the new link.
 ```c
 t_list	*ft_lstnew(void const *content, size_t content_size);
 ```
