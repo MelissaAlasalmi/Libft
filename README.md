@@ -135,13 +135,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 ```
 
 ### ft_strcmp
-Lexicographically compares the null-terminated strings “s1” and “s2”. Returns an integer greater than, equal to, or less than 0, according as the string “s1” is greater than, equal to, or less than the string “s2”. The comparison is done using unsigned characters, so that '\200' is greater than '\0'.
+Lexicographically compares the null-terminated strings “s1” and “s2”. Returns an integer greater than, equal to, or less than 0, based on if the string “s1” is greater than, equal to, or less than the string “s2”. The comparison is done using unsigned characters, so that '\200' is greater than '\0'.
 ```c
 int	ft_strcmp(const char *s1, const char *s2);
 ```
 
 ### ft_strncmp
-Lexicographically compares the null-terminated strings “s1” and “s2”, but not more than “n” characters. Because strncmp() is designed for comparing strings rather than binary data, characters that appear after a '\0' character are not compared. Returns an integer greater than, equal to, or less than 0, according as the string “s1” is greater than, equal to, or less than the string “s2”. The comparison is done using unsigned characters, so that '\200' is greater than '\0'.
+Lexicographically compares the null-terminated strings “s1” and “s2”, but not more than “n” characters. Because strncmp() is designed for comparing strings rather than binary data, characters that appear after a '\0' character are not compared. Returns an integer greater than, equal to, or less than 0, based on if the string “s1” is greater than, equal to, or less than the string “s2”. The comparison is done using unsigned characters, so that '\200' is greater than '\0'.
 ```c
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 ```
@@ -165,7 +165,7 @@ int	ft_isdigit(int c);
 ```
 
 ### ft_isalnum
-Tests for any character for which isalpha(3) or isdigit(3) is true. The value of the argument must be representable as an unsigned char or the value of EOF. In the ASCII character set, this characters preceded by their numeric values, in octal. Returns zero if the character tests false and returns non-zero if the character tests true.
+Tests for any character for which isalpha(3) or isdigit(3) is true. The value of the argument must be representable as an unsigned char or the value of EOF. In the ASCII character set, these characters are preceded by their numeric values, in octal. Returns zero if the character tests false and returns non-zero if the character tests true.
 ```c
 int	ft_isalnum(int c);
 ```
@@ -218,7 +218,7 @@ char	*ft_strnew(size_t size);
 ```
 
 ### ft_strdel
-Takes as a parameter the address of a string that need to be freed with free(3), then sets its pointer to NULL. 
+Takes as a parameter the address of a string that needs to be freed with free(3), then sets its pointer to NULL. 
 - Uses ft_memdel
 ```c
 void	ft_strdel(char **as);
@@ -231,25 +231,25 @@ void	ft_strclr(char *s);
 ```
 
 ### ft_striter
-Applies the function “f” to each character of the string passed as argument. Each character is passed by address to “f” to be modified if necessary.
+Applies the function “f” to each character of the string passed as an argument. Each character is passed by address to “f” to be modified if necessary.
 ```c
 void	ft_striter(char *s, void (*f)(char *));
 ```
 
 ### ft_striteri
-Applies the function “f” to each character of the string passed as argument, and passing its index as first argument. Each character is passed by address to "f" to be modified if necessary.
+Applies the function “f” to each character of the string passed as an argument, and passing its index as first argument. Each character is passed by address to "f" to be modified if necessary.
 ```c
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 ```
 
 ### ft_strmap
-Applies the function “f” to each character of the string given as argument to create a “fresh” new string resulting from the successive applications of “f”. Uses ft_strnew and ft_strlen. Returns the “fresh” string created from the successive applications of “f”.
+Applies the function “f” to each character of the string given as an argument to create a “fresh” new string resulting from the successive applications of “f”. Uses ft_strnew and ft_strlen. Returns the “fresh” string created from the successive applications of “f”.
 ```c
 char	*ft_strmap(char const *s, char (*f)(char));
 ```
 
 ### ft_strmapi
-Applies the function “f” to each character of the string passed as argument by giving its index as first argument to create a “fresh” new string resulting from the successive applications of “f”. Returns the “fresh” string created from the successive applications of “f”. 
+Applies the function “f” to each character of the string passed as an argument by giving its index as the first argument to create a “fresh” new string resulting from the successive applications of “f”. Returns the “fresh” string created from the successive applications of “f”. 
 - Uses ft_strnew
 - Uses ft_strlen
 - Uses ft_striteri
@@ -295,7 +295,7 @@ char	*ft_strtrim(char const *s);
 ```
 
 ### ft_strsplit
-Allocates and returns an array of “fresh” strings (all ending with ’\0’, including the array itself) obtained by splitting s using the character c as a delimiter. If the allocation fails the function returns NULL. Example: ft_strsplit("*hello*fellow*students*", ’*’) returns the array ["hello", "fellow", "students"]. 
+Allocates and returns an array of “fresh” strings (all ending with ’\0’, including the array itself) obtained by splitting 's' using the character c as a delimiter. If the allocation fails the function returns NULL. Example: ft_strsplit("*hello*fellow*students*", ’*’) returns the array ["hello", "fellow", "students"]. 
 - Uses ft_wordcount
 - Uses ft_strsub
 ```c
@@ -368,7 +368,7 @@ void	ft_putnbr_fd(int n, int fd);
 ## Functions that manipulate lists:
 
 ### ft_lstnew
-Allocates and returns a “fresh” link. The variables content and content_size of the new link are initialized by copy of the parameters of the function. If the parameter content is nul, the variable content is initialized to NULL and the variable content_size is initialized to 0 even if the parameter content_size isn’t. The variable next is initialized to  NULL. If the allocation fails, the function returns NULL. Return value is the new link.
+Allocates and returns a “fresh” link. The variables content and content_size of the new link are initialized by a copy of the parameters of the function. If the parameter content is nul, the variable content is initialized to NULL and the variable content_size is initialized to 0 even if the parameter content_size isn’t. The variable next is initialized to  NULL. If the allocation fails, the function returns NULL. Return value is the new link.
 ```c
 t_list	*ft_lstnew(void const *content, size_t content_size);
 ```
@@ -380,7 +380,7 @@ void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 ```
 
 ### ft_lstdel
-Takes as a parameter the adress of a pointer to a link and frees the memory of this link and every successors of that link using the functions del and free(3). Finally the pointer to the link that was just freed must be set to NULL.
+Takes as a parameter the address of a pointer to a link and frees the memory of this link and every successor of that link using the functions del and free(3). Finally the pointer to the link that was just freed must be set to NULL.
 ```c
 void	ft_lstdel(t_list **alst, void (*del)(void*, size_t));
 ```
@@ -418,7 +418,7 @@ int	ft_intlen(long long num);
 ```
 
 ### ft_itoabase
-Works the same way as ft_itoa, but it also takes "base" as a paramater, allowing you to carry out the conversion for any base. Made custome for ft_printf.
+Works the same way as ft_itoa, but it also takes "base" as a parameter, allowing you to carry out the conversion for any base. Made custom for ft_printf.
 - Uses ft_strnew
 - Uses ft_strcpy
 ```c
@@ -426,7 +426,7 @@ char		*ft_itoabase(long long value, int base);
 ```
 
 ### ft_uitoabase
-Works the same way as ft_itoabase, but it returns its value as unsigned. Made custome for ft_printf.
+Works the same way as ft_itoabase, but it returns its value as unsigned. Made custom for ft_printf.
 - Uses ft_strnew
 ```c
 char		*ft_uitoabase(unsigned long long value, int base);
@@ -450,7 +450,7 @@ Counts and returns the number of words in a string. Made custom for ft_strsplit.
 int		ft_wordcount(const char *s, char c);
 ```
 
-### get_next_line
+### [get_next_line](https://github.com/MelissaAlasalmi/Get_Next_Line)
 ✅ Project score: 123/100 ✅  
 Returns a line read from a file descriptor
 ```c
@@ -458,7 +458,7 @@ int get_next_line(const int fd, char **line);
 ```
 
 ## Coming soon:
-### ft_printf
+### [ft_printf](https://github.com/MelissaAlasalmi/ft_printf)
 ✅ Project score: 109/100 ✅  
 A recoded version of libc’s printf function
 ```c
